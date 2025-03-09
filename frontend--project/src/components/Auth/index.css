@@ -1,0 +1,149 @@
+.auth-form {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  
+  .auth-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  /* Input fields */
+  .auth-form input {
+    width: 100%; /* Full width of the container */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: var(--transition);
+    box-sizing: border-box; /* Include padding and border in the width */
+  }
+  
+  .auth-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  /* Password input container */
+  .password-input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Password input field */
+  .password-input-container input {
+    padding-right: 40px; /* Add padding for the eye icon */
+  }
+  
+  /* Eye icon */
+  .toggle-password-icon {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%); /* Center vertically */
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center; /* Ensure icon is centered */
+    justify-content: center; /* Ensure icon is centered */
+    height: 20px; /* Set a fixed height for the icon container */
+    width: 20px; /* Set a fixed width for the icon container */
+    background-color: transparent; /* Ensure no background color */
+  }
+  
+  .toggle-password-icon:hover {
+    color: var(--primary-color);
+  }
+  
+  .auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--transition);
+  }
+  
+  .auth-form button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+  }
+  
+  .error {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .validation-errors {
+    margin-bottom: 15px;
+  }
+  
+  .validation-errors .error {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+  }
+  
+  .auth-form p {
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 15px;
+  }
+  
+  .auth-form p button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  
+  .auth-form p button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .auth-form {
+      margin: 30px auto;
+      padding: 15px;
+    }
+  
+    .auth-form h1 {
+      font-size: 1.5rem;
+    }
+  
+    .auth-form input {
+      font-size: 14px;
+    }
+  
+    .auth-form button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .auth-form p {
+      font-size: 14px;
+    }
+  }
