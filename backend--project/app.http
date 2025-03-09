@@ -1,0 +1,75 @@
+### Signup a new user
+POST http://localhost:5000/signup
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+
+### Signup a new user
+POST http://localhost:5000/signup
+Content-Type: application/json
+
+{
+  "name": "seshu",
+  "email": "seshug392@gmail.com",
+  "password": "seshu456"
+}
+
+
+### Login an existing user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+
+### Get all recipes for the authenticated user
+GET http://localhost:5000/recipes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQxNDc2OTUzLCJleHAiOjE3NDE0ODA1NTN9.PAIxMAmfsJ5WW69eEPdQ9yICrObUf-uuNny1EB78qlg
+
+### Create a new recipe
+POST http://localhost:5000/recipes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQxNDY3NDEwLCJleHAiOjE3NDE0NzEwMTB9.Kjj17_koreVuKKbkPq4-xAntXc31UCICwXMg3mq9g-U
+Content-Type: application/json
+
+{
+  "title": "Spaghetti Carbonara",
+  "description": "A classic Italian pasta dish.",
+  "ingredients": "Spaghetti, eggs, pancetta, parmesan, black pepper",
+  "instructions": "1. Cook spaghetti. 2. Fry pancetta. 3. Mix eggs and cheese. 4. Combine everything.",
+  "categoryId": 1,
+  "imageUrl": "http://localhost:5000/uploads/spaghetti.jpg"
+}
+
+### Update an existing recipe
+PUT http://localhost:5000/recipes/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQxNDY3NDEwLCJleHAiOjE3NDE0NzEwMTB9.Kjj17_koreVuKKbkPq4-xAntXc31UCICwXMg3mq9g-U
+Content-Type: application/json
+
+{
+  "title": "Updated Spaghetti Carbonara",
+  "description": "An updated version of the classic Italian pasta dish.",
+  "ingredients": "Spaghetti, eggs, pancetta, parmesan, black pepper, garlic",
+  "instructions": "1. Cook spaghetti. 2. Fry pancetta with garlic. 3. Mix eggs and cheese. 4. Combine everything.",
+  "categoryId": 1,
+  "imageUrl": "http://localhost:5000/uploads/spaghetti_updated.jpg"
+}
+
+GET http://localhost:5000/recipes/1
+Authorization: Bearer 
+
+### Upload an image
+POST http://localhost:5000/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="spaghetti.jpg"
+Content-Type: image/jpeg
+
+< ./path/to/your/image.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
